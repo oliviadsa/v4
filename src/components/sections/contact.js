@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
-import { srConfig, email } from '@config';
+import { srConfig } from '@config';
 import sr from '@utils/sr';
 import { usePrefersReducedMotion } from '@hooks';
 
@@ -32,12 +32,53 @@ const StyledContactSection = styled.section`
   }
 
   .title {
-    font-size: clamp(40px, 5vw, 60px);
+    font-size: clamp(25px, 2vw, 35px);
   }
 
   .email-link {
     ${({ theme }) => theme.mixins.bigButton};
     margin-top: 50px;
+  }
+`;
+
+const StyleContactForm = styled.form`
+  display: flex;
+  flex-direction: column;
+
+  div {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+
+    label {
+      color: var(--white);
+      text-align: left;
+      margin-bottom: 0.5rem; /* Optional: Add some spacing between label and input */
+    }
+
+    input,
+    textarea {
+      background-color: var(--dark-navy);
+      border: 1px solid var(--lightest-slate);
+      width: 100%;
+      color: var(--white);
+      font-size: 1rem;
+      padding: 0.375rem 0.75rem;
+      &:focus {
+        border: 1px solid var(--green);
+      }
+    }
+    input {
+      height: calc(1.5em + 0.75rem + 2px);
+    }
+    textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+    .submit-button {
+      ${({ theme }) => theme.mixins.button};
+      margin: 20px auto 0;
+    }
   }
 `;
 
@@ -54,19 +95,37 @@ const Contact = () => {
   }, []);
 
   return (
-    <StyledContactSection id="contact" ref={revealContainer}>
-      <h2 className="numbered-heading overline">What’s Next?</h2>
+    <StyledContactSection id="hireme" ref={revealContainer}>
+      <h2 className="numbered-heading overline">Let's Connect?</h2>
 
-      <h2 className="title">Hire Me</h2>
-
-      <p>
-        Do you want to help me in my career? Fill out the below firm and I will reach out to you as
-        soon as possible!
-      </p>
-
-      <a className="email-link" href={`mailto:${email}`}>
-        Say Hello
-      </a>
+      <h6 className="title">I am open to work and looking for Project/Product Management roles.</h6>
+      <h6 className="title">Have something for me?</h6>
+      <StyleContactForm action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="32ffdd00-c08d-4b85-af1c-4e1dcf97d5b5" />
+        <div>
+          <label>
+            Name <input type="text" name="name" />
+          </label>
+        </div>
+        <div>
+          <label>
+            Email <input type="email" name="email" />
+          </label>
+        </div>
+        <div>
+          <label>
+            Company Website <input type="url" name="url" />
+          </label>
+        </div>
+        <div>
+          <label>
+            Short description of the opportunity <textarea name="description" />
+          </label>
+        </div>
+        <div>
+          <button className="submit-button">Submit</button>
+        </div>
+      </StyleContactForm>
     </StyledContactSection>
   );
 };
