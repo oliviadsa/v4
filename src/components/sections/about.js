@@ -112,6 +112,9 @@ const StyledPic = styled.div`
     }
   }
 `;
+const Bold = styled.strong`
+  color: var(--lightest-slate);
+`;
 
 const About = () => {
   const revealContainer = useRef(null);
@@ -125,7 +128,19 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['JavaScript (ES6+)', 'TypeScript', 'React', 'Eleventy', 'Node.js', 'WordPress'];
+  const skills = [
+    'Requirements Gathering',
+    'Agile Transformation',
+    'Project Management',
+    'Customer Satisfaction',
+    'Market Research',
+    'Design Thinking',
+    'Communication',
+    'Technical Documentation',
+    'MS Office',
+    'Product Roadmap',
+    'Data Visualization',
+  ];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -135,21 +150,29 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hello! My name is Brittany and I enjoy creating things that live on the internet. My
-              interest in web development started back in 2012 when I decided to try editing custom
-              Tumblr themes — turns out hacking together a custom reblog button taught me a lot
-              about HTML &amp; CSS!
+              I am a motivated professional with a background in{' '}
+              <Bold>computer science, project management, and business analysis.</Bold> With my
+              ongoing pursuit of a master's degree at <Bold>New York University,</Bold> including
+              coursework in{' '}
+              <Bold>Project Management, Technology Strategy, and Design Thinking,</Bold> I have
+              gained valuable insights and practical experience in the{' '}
+              <Bold> Program and Product Management</Bold>fields.
+            </p>
+            <p>
+              My prior experiences as a <Bold>Technical Business Analyst</Bold> at a public health
+              firm and my most recent internship as a{' '}
+              <Bold>Technical Program Manager Intern at Cloudflare</Bold> have equipped me with a
+              comprehensive understanding of project and product management and the intricacies of
+              technical development. My commitment to leveraging technology for strategic innovation
+              and my proven track record of driving successful project is my super power!
             </p>
 
             <p>
               Fast-forward to today, and I’ve had the privilege of working at{' '}
-              <a href="https://us.mullenlowe.com/">an advertising agency</a>,{' '}
-              <a href="https://starry.com/">a start-up</a>,{' '}
-              <a href="https://www.apple.com/">a huge corporation</a>, and{' '}
-              <a href="https://scout.camd.northeastern.edu/">a student-led design studio</a>. My
-              main focus these days is building accessible, inclusive products and digital
-              experiences at <a href="https://upstatement.com/">Upstatement</a> for a variety of
-              clients.
+              <a href="https://www.cloudflare.com/">a computer and network security comany</a>,{' '}
+              <a href="https://www.nyu.edu/">a private educational institution</a>,{' '}
+              <a href="https://duretechnologies.com/">a public health firm</a>, and{' '}
+              <a href="https://www.targetpublications.org/">a book publishing company</a>.
             </p>
 
             <p>
@@ -161,7 +184,7 @@ const About = () => {
               &amp; React.
             </p>
 
-            <p>Here are a few technologies I’ve been working with recently:</p>
+            <p>Here is what I am known to be best at:</p>
           </div>
 
           <ul className="skills-list">
@@ -173,7 +196,7 @@ const About = () => {
           <div className="wrapper">
             <StaticImage
               className="img"
-              src="../../images/me.jpg"
+              src="../../images/IMG_3732.jpg"
               width={500}
               quality={95}
               formats={['AUTO', 'WEBP', 'AVIF']}
