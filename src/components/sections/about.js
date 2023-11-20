@@ -156,7 +156,7 @@ const About = () => {
               coursework in{' '}
               <Bold>Project Management, Technology Strategy, and Design Thinking,</Bold> I have
               gained valuable insights and practical experience in the{' '}
-              <Bold> Program and Product Management</Bold>fields.
+              <Bold> Program and Product Management</Bold> fields.{' '}
             </p>
             <p>
               My prior experiences as a <Bold>Technical Business Analyst</Bold> at a public health
@@ -173,15 +173,6 @@ const About = () => {
               <a href="https://www.nyu.edu/">a private educational institution</a>,{' '}
               <a href="https://duretechnologies.com/">a public health firm</a>, and{' '}
               <a href="https://www.targetpublications.org/">a book publishing company</a>.
-            </p>
-
-            <p>
-              I also recently{' '}
-              <a href="https://www.newline.co/courses/build-a-spotify-connected-app">
-                launched a course
-              </a>{' '}
-              that covers everything you need to build a web app with the Spotify API using Node
-              &amp; React.
             </p>
 
             <p>Here is what I am known to be best at:</p>
