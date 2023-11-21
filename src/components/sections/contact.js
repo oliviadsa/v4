@@ -104,12 +104,12 @@ const Contact = () => {
         <input type="hidden" name="access_key" value="32ffdd00-c08d-4b85-af1c-4e1dcf97d5b5" />
         <div>
           <label>
-            Name <input type="text" name="name" />
+            Name * <input type="text" name="name" required />
           </label>
         </div>
         <div>
           <label>
-            Email <input type="email" name="email" />
+            Email * <input type="email" name="email" required />
           </label>
         </div>
         <div>
@@ -119,7 +119,7 @@ const Contact = () => {
         </div>
         <div>
           <label>
-            Short description of the opportunity <textarea name="description" />
+            Short description of the opportunity *<textarea name="description" required />
           </label>
         </div>
         <div>
