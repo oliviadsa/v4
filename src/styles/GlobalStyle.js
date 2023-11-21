@@ -22,7 +22,7 @@ const GlobalStyle = createGlobalStyle`
 
   ::selection {
     background-color: var(--lightest-navy);
-    color: var(--lightest-slate);
+    color: var(--slate);
   }
 
   /* Provide basic, default focus styles.*/
@@ -59,11 +59,11 @@ const GlobalStyle = createGlobalStyle`
     width: 12px;
   }
   ::-webkit-scrollbar-track {
-    background: var(--navy);
+    background: var(--lighter-background-primary);
   }
   ::-webkit-scrollbar-thumb {
     background-color: var(--dark-slate);
-    border: 3px solid var(--navy);
+    border: 3px solid var(--lighter-background-primary);
     border-radius: 10px;
   }
 
@@ -74,7 +74,7 @@ const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    background-color: var(--navy);
+    background-color: var(--lighter-background-primary);
     color: var(--slate);
     font-family: var(--font-sans);
     font-size: var(--fz-xl);
@@ -373,7 +373,7 @@ const GlobalStyle = createGlobalStyle`
     &:hover,
     &:focus {
       background-color: var(--green);
-      color: var(--navy);
+      color: var(--lighter-background-primary);
       top: 0;
       left: 0;
       width: auto;
