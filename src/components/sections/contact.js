@@ -58,7 +58,7 @@ const StyleContactForm = styled.form`
 
     input,
     textarea {
-      background-color: var(--background-primary);
+      background-color: var(--dark-navy);
       border: 1px solid var(--lightest-slate);
       width: 100%;
       color: var(--white);
