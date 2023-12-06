@@ -202,7 +202,7 @@ export default function Reccomendations() {
   };
 
   return (
-    <StyledRecommendationSection>
+    <StyledRecommendationSection id="reccommendations">
       <h2 className="numbered-heading">Reccomendations</h2>
       <div className="arrows">
         <button

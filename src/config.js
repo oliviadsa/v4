@@ -30,6 +30,10 @@ module.exports = {
       url: '/#about',
     },
     {
+      name: 'Reccommendations',
+      url: '/#reccommendations',
+    },
+    {
       name: 'Experience',
       url: '/#jobs',
     },
